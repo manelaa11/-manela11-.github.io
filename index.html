@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Convite especial ❤️</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+background:#ffd6e7;
+margin-top:100px;
+}
+
+button{
+font-size:20px;
+padding:15px 25px;
+margin:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#sim{
+background:#ff4d6d;
+color:white;
+}
+
+#nao{
+background:#333;
+color:white;
+position:relative;
+}
+
+img{
+width:300px;
+margin-top:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Madu ❤️</h1>
+
+<h2>Tenho um convite especial para você...</h2>
+
+<p>Você aceita ir comigo para um jantar sexta-feira às 20h? 🍝✨</p>
+
+<button id="sim">SIM ❤️</button>
+<button id="nao">NÃO 😳</button>
+
+<div id="resultado"></div>
+
+<audio autoplay loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const sim = document.getElementById("sim")
+const nao = document.getElementById("nao")
+const resultado = document.getElementById("resultado")
+
+sim.onclick = function(){
+
+resultado.innerHTML = `
+<h2>Eu sabia que você ia aceitar ❤️</h2>
+<p>Então te busco sexta às 20h 😍</p>
+<img src="sim.jpg">
+`
+
+}
+
+nao.onmouseover = function(){
+
+const x = Math.random() * 300
+const y = Math.random() * 300
+
+nao.style.position = "absolute"
+nao.style.left = x + "px"
+nao.style.top = y + "px"
+
+}
+
+</script>
+
+</body>
+
+</html>
